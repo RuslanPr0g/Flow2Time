@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+body {
+    font-family: 'Teko', sans-serif;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin: auto;
+}
+
+input {
+    width: 50px;
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+#countdown {
+    margin-top: 15px;
+    font-size: 30px;
+}
+
