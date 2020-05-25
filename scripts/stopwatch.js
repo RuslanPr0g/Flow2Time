@@ -11,6 +11,8 @@ let interval = null;
 
 let status = "stopped";
 
+let countRec = 0;
+
 function stopwatch() {
 
     seconds++;
@@ -64,13 +66,17 @@ function reset() {
     minutes = 0;
     hours = 0;
 
+    displaySeconds = displayMinutes = displayHours = "00";
+
     document.querySelector('#countup').innerHTML = "00:00:00";
     document.querySelector('#startstop').innerHTML = "Start";
     status = "stopped";
 }
 
 function recordwatch() {
-    let elemR = document.createElement("p");
+    if(countRec > 7) return;
+
+    let elemR = document.createElement("li");
     let record = document.createTextNode(`${displayHours}:${displayMinutes}:${displaySeconds}`);
 
     elemR.appendChild(record);
@@ -79,9 +85,12 @@ function recordwatch() {
     listR.appendChild(elemR);
 
     document.getElementById("RecordsClear").style.display = "block";
+
+    countRec++;
 }
 
 function clearRecords() {
     document.getElementById("listRecords").innerHTML = "";
     document.getElementById("RecordsClear").style.display = "none";
+    countRec = 0;
 }

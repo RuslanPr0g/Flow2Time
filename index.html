@@ -3,31 +3,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Time Flow</title>
+    <title>Flow 2 Time</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
-    <script src='scripts/stopwatch.js'></script>
 </head>
-<body>
-    <h2>Welcome to Time Flow!</h2>
+<body id="main">
+    <h2>Welcome to Flow 2 Time</h2>
     <div id="timeBlocks">
-        <div id="timer" class="timeBlock">
-            <h2>TIMER</h2>
-            <input type="text" id="minutes">
-            <button id="startTimer" onclick="startReset()">Start</button>
-            <h3 id="countdown">00:00</h3>
-        </div>
-        <div id="stopWatch" class="timeBlock">
-            <h2>STOPWATCH</h2>
-            <button id="startstop" onclick="startStop()">Start</button>
-            <button onclick="reset()">Reset</button>
-            <button id="recordWatch" onclick="recordwatch()">Record</button>
-            <button id="RecordsClear" onclick="clearRecords()">Clear</button>
-            <h3 id="countup">00:00:00</h3>
-            <div id="listRecords">
-            </div>
-        </div>
+        <a href="timer.html" class="timeBlock">Timer</a>
+        <a href="stopwatch.html" class="timeBlock">Stopwatch</a>
     </div>
+    <div><img src="/img/github.png" alt="github" class="github"> <a href="https://github.com/RuslanPr0g/TimeFlow" target="_blank" class="github">GitHub</a></div>
 </body>
-<script src='scripts/timer.js'></script>
 </html>

@@ -16,6 +16,13 @@ input {
     width: 50px;
 }
 
+a.timeBlock {
+    text-decoration: none;
+    font-size: 60px;
+    color: #2A5766;
+    box-shadow: black 2px 4px 7px;
+}
+
 #countdown {
     margin-top: 15px;
     font-size: 30px;
@@ -45,5 +52,24 @@ input {
     height: 200px;
     width: 200px;
     background-color: aqua;
+    margin: auto;
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+    height: 50px;
+    width: 50px;
+    font-size: 28px;
+}
+
+.github {
+    text-decoration: none;
+    color: thistle;
+    width: 25px;
+    font-size: 30px;
+}

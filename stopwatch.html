@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>StopWatch</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style-stopwatch.css'>
+    <script src='scripts/stopwatch.js'></script>
+</head>
+<body>
+    <a href="index.html" class="home">Home</a>
+    <div id="stopWatch" class="timeBlock">
+        <h2>STOPWATCH</h2>
+        <div class="controls">
+            <button id="startstop" onclick="startStop()">Start</button>
+            <button onclick="reset()">Reset</button>
+            <button id="recordWatch" onclick="recordwatch()">Record</button>
+            <button id="RecordsClear" onclick="clearRecords()">Clear</button>
+        </div>
+        <h3 id="countup">00:00:00</h3>
+    </div>
+    <div class="timeBlock records">
+        <h2>Records</h2>
+        <ul id="listRecords" >
+
+        </ul>
+    </div>
+</body>
+</html>

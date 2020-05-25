@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    height: 200px;
+}
+
+.timeBlock {
+    padding: 30px;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;   
+}
+
+.records {
+    background-color: white;
+    height: 300px;
+}
