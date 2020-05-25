@@ -2,6 +2,13 @@
 
 body {
     font-family: 'Teko', sans-serif;
+    display: flex;
+	flex-direction: column;
+}
+
+footer {
+    margin-top: 31.415px;
+    flex: 0 0 auto;
 }
 
 h2 {
@@ -34,12 +41,17 @@ a.timeBlock {
 }
 
 #timeBlocks {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-row-gap: 50px;
+    
 }
 
 #RecordsClear {
     display: none;
+}
+
+#welcome {
+    font-size: 40px;
 }
 
 .timeBlock {

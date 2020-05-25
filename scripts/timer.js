@@ -25,6 +25,7 @@ function updateCount() {
 function startReset() {
     if(status == "reset") {
         startTime = document.getElementById('minutes').value;
+        if(isNaN(startTime)) startTime = 0;
         time = startTime * 60;
         interval = window.setInterval(updateCount, 1000);
         startTime < 10 ? document.querySelector('#countdown').innerHTML = `0${Math.floor(startTime)}:00` : 

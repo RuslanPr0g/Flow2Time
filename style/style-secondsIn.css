@@ -1,0 +1,12 @@
+h2 {
+    margin-top: 0;
+}
+
+#result {
+    font-size: 50px;
+    color: teal;
+}
+
+.data-fields {
+    margin: auto;
+}

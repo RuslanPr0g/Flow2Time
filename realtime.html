@@ -6,16 +6,14 @@
     <title>Timer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style/style-timer.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style-clock.css'>
     <link rel="icon" href="/img/time.ico" type="image/icon type">
-    <script src='scripts/timer.js'></script>
+    <script src='scripts/realtime.js'></script>
 </head>
-<body>
+<body onload="realTimeClock()">
     <div id="timer" class="timeBlock">
-        <h2>TIMER</h2>
-        <input type="text" id="minutes">
-        <button id="startTimer" onclick="startReset()">Start</button>
-        <h3 id="countdown">00:00</h3>
+        <h2>Real Time</h2>
+        <div id="clock">00:00:00</div>
     </div>
     <footer>
         <a href="index.html" class="home">Home</a>
