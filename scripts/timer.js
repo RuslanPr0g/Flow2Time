@@ -1,32 +1,49 @@
-let pause = false;
+status = "reset";
+let interval = null;
+let startTime = 0;
 
-function timer() {
-    const startTime = document.getElementById('minutes').value; // in minutes
+let time = 0;
+let minutes = 0;
+let seconds = 0;
 
-    let time = startTime * 60; // get seconds
+function updateCount() {
+    minutes = Math.floor(time / 60);
+    seconds = time % 60;
 
-    const countdown = document.getElementById('countdown');
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
 
-    pause ? null : setInterval(updateCount, 1000);
+    if(time < 0) return;
 
-    function updateCount() {
-        let minutes = Math.floor(time / 60);
-        let seconds = time % 60;
+    if(time < 10) document.getElementById('countdown').style.color = "red";
+    else document.getElementById('countdown').style.color = "black";
 
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
+    document.getElementById('countdown').innerHTML = `${minutes}:${seconds}`;
+    time--;
+}
 
-        if(pause == true || time < 0) return;
-
-        if(time < 10) document.getElementById('countdown').style.color = "red";
-        else document.getElementById('countdown').style.color = "black";
-
-        countdown.innerHTML = `${minutes}:${seconds}`;
-        time--;
+function startReset() {
+    if(status == "reset") {
+        startTime = document.getElementById('minutes').value;
+        time = startTime * 60;
+        interval = window.setInterval(updateCount, 1000);
+        startTime < 10 ? document.querySelector('#countdown').innerHTML = `0${Math.floor(startTime)}:00` : 
+        document.querySelector('#countdown').innerHTML = `${Math.floor(startTime)}:00`;
+        document.querySelector('#startTimer').innerHTML = "Reset";
+        status = "started";
+    } 
+    else {
+        window.clearInterval(interval);
+        document.querySelector('#startTimer').innerHTML = "Start";
+        document.querySelector('#minutes').value = "";
+        resetTimer();
+        status = "reset";
     }
 }
 
-function ptimer() {
-    pause = !pause;
-    pause ? document.querySelector('#pauseTimer').innerHTML = 'Resume' : document.querySelector('#pauseTimer').innerHTML = 'Pause'; 
+function resetTimer() {
+    pause = true;
+    startTime = 0;
+    document.querySelector('#minutes').innerHTML = "";
+    document.querySelector('#countdown').innerHTML = "00:00";
 }
