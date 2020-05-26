@@ -31,9 +31,11 @@ function startReset() {
         startTime < 10 ? document.querySelector('#countdown').innerHTML = `0${Math.floor(startTime)}:00` : 
         document.querySelector('#countdown').innerHTML = `${Math.floor(startTime)}:00`;
         document.querySelector('#startTimer').innerHTML = "Reset";
+        document.querySelector('#addm').style.display = "block";
         status = "started";
     } 
     else {
+        document.querySelector('#addm').style.display = "none";
         window.clearInterval(interval);
         document.querySelector('#startTimer').innerHTML = "Start";
         document.querySelector('#minutes').value = "";
@@ -47,4 +49,9 @@ function resetTimer() {
     startTime = 0;
     document.querySelector('#minutes').innerHTML = "";
     document.querySelector('#countdown').innerHTML = "00:00";
+}
+
+function addMinute() {
+    time = time + 60;
+    console.log(time)
 }

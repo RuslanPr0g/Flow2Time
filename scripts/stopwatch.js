@@ -74,7 +74,7 @@ function reset() {
 }
 
 function recordwatch() {
-    if(countRec > 7) return;
+    if(countRec > 12) return;
 
     let elemR = document.createElement("li");
     let record = document.createTextNode(`${displayHours}:${displayMinutes}:${displaySeconds}`);

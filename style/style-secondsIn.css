@@ -2,6 +2,18 @@ h2 {
     margin-top: 0;
 }
 
+input {
+    width: 50px;
+    margin-left: 10px;
+}
+
+button {
+    margin-left: 15px;
+    height: 30px;
+    width: 60px;
+    padding: 0;
+}
+
 #result {
     font-size: 50px;
     color: teal;
@@ -9,4 +21,9 @@ h2 {
 
 .data-fields {
     margin: auto;
+    font-size: 12px;
+}
+
+.timeBlock {
+    width: 300px;
 }
